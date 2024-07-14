@@ -1,0 +1,9 @@
+services:
+  yolo:
+    restart: always
+    build:
+      context: .
+    environment:
+      - YOLO_ENV=production
+    volumes:
+      - ./credentials:/credentials

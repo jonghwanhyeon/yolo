@@ -1,0 +1,6 @@
+fastapi
+loguru
+playwright
+pydantic
+python-stopwatch
+python-tml
