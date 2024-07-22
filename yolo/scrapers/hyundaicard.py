@@ -27,9 +27,9 @@ class HyundaiCardScraper(Scraper):
             await self._login(page)
 
             await page.goto("https://www.hyundaicard.com/cpa/ma/CPAMA0101_01.hc", wait_until="networkidle")
-            return Statement(
-                spending=int(only_digits("".join(await page.locator(".items p[class^='pay']").all_text_contents())))
-            )
+
+            statements = await page.locator(".items p[class^='pay']").all_text_contents()
+            return Statement(spending=sum(int(only_digits(amount)) for amount in statements))
 
     @profile(format=config.profile_format, report_at_exit=False, logger=logger)
     async def _login(self, page: Page):
