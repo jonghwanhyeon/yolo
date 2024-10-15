@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright:v1.45.1-jammy
+FROM mcr.microsoft.com/playwright:v1.47.0-jammy
 ENV PYTHONUNBUFFERED=1
 
 RUN wget -O /tmp/get-pip.py "https://bootstrap.pypa.io/get-pip.py" \
