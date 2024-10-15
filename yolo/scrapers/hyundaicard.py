@@ -44,4 +44,4 @@ class HyundaiCardScraper(Scraper):
         await tricker.press("enter")
 
         await page.locator("#loginBtn").click()
-        await page.wait_for_url("**/index.jsp")
+        await page.wait_for_url("**/{index.jsp,CPMMB0101_02.hc}")
