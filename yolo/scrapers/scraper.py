@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
+from collections.abc import AsyncGenerator
 from contextlib import asynccontextmanager
-from typing import AsyncGenerator
 
 from playwright.async_api import Page, Request, Response, async_playwright
 from pydantic import BaseModel
